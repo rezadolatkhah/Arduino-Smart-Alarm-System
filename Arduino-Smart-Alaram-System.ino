@@ -67,8 +67,8 @@ void loop() {
   unsigned long currentMillis = millis();
   if (currentMillis - lastChange >= interval) {
   lastChange = currentMillis;
-  hue += hueIncrement; // افزایش هیو برای تغییر رنگ
-  fill_solid(leds, NUM_LEDS, CHSV(hue, 255, 255)); // تنظیم رنگ تمام LEDها
+  hue += hueIncrement;
+  fill_solid(leds, NUM_LEDS, CHSV(hue, 255, 255));
   FastLED.show();
   }
   
